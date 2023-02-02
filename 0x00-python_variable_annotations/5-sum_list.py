@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """Type-annotated sum_list function to sum a list of floats."""
-from functools import reduce
+# from functools import reduce
 from typing import List
 
 
@@ -12,4 +12,5 @@ def sum_list(input_list: List[float]) -> float:
     Return:
         float: cumulative sum of input.
     """
-    return reduce(lambda x, y: x + y, input_list)
+    # return reduce(lambda x, y: x + y, input_list)
+    return sum(input_list)
