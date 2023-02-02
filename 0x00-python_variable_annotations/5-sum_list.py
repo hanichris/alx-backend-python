@@ -13,4 +13,7 @@ def sum_list(input_list: List[float]) -> float:
         float: cumulative sum of input.
     """
     # return reduce(lambda x, y: x + y, input_list)
-    return sum(input_list)
+    accumulator = 0.0
+    for num in input_list:
+        accumulator += num
+    return accumulator
