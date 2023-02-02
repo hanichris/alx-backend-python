@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 """Type-annotated sum_list function to sum a list of floats."""
 from functools import reduce
-from typing import Iterable
+from typing import List
 
 
-def sum_list(input_list: Iterable[float]) -> float:
+def sum_list(input_list: List[float]) -> float:
     """Sum a list of floats and return result.
 
     Args:
