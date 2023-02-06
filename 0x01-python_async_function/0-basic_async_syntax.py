@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """Module containing an asynchronous coroutine.
 
 Captures the basic of the asyncio module.
