@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""""""
+"""Create a Task object for a given coroutine."""
 import asyncio
 
 wait_random = __import__('0-basic_async_syntax').wait_random
