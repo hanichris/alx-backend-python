@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Module containing an asynchronous coroutine."""
+"""Module containing an asynchronous coroutine.
+
+Captures the basic of the asyncio module.
+"""
 import asyncio
 import random
 
