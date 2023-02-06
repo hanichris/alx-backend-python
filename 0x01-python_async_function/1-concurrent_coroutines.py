@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Executing multiple coroutines at the same time with async"""
+"""Executing multiple coroutines at the same time with async.
+
+The asynchronous coroutine should return the list of all the delays
+in ascending order by taking advantage of concurrency and NOT the
+`sort` functionality.
+"""
 import asyncio
 from typing import List
 
