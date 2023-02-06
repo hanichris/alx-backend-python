@@ -4,6 +4,14 @@ from typing import List, Tuple
 
 
 def zoom_array(lst: Tuple, factor: int = 2) -> List:
+    """Returns a list of integers multiplied by certain factor.
+
+    Args:
+        lst: A tuple of integers.
+        factor: An integer.
+    Returns:
+        A list of integers.
+    """
     zoomed_in: List = [
         item for item in lst
         for i in range(factor)
@@ -11,7 +19,7 @@ def zoom_array(lst: Tuple, factor: int = 2) -> List:
     return zoomed_in
 
 
-array = (12, 72, 91)
+array: Tuple = (12, 72, 91)
 
 zoom_2x = zoom_array(array)
 
