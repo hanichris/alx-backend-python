@@ -52,14 +52,13 @@ class TestGetJson(unittest.TestCase):
         ("http://holberton.io", {"payload": False})
     ])
     @patch('requests.get')
-    def test__get_json(self, test_url: str,
-                       test_payload: Mapping, mock_get) -> None:
+    def test__get_json(self, test_url, test_payload, mock_get):
         """Test that `utils.get_json` returns the expected result.
 
         Args:
             test_url (str): url to make request to.
             test_payload (Mapping): output of json method.
-            Mock: MagicMock
+            Mock: MagicMock of `requests.get`
         """
         mock_get.return_value.json.return_value = test_payload
         self.assertEqual(get_json(test_url), test_payload)
