@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Unit test for the `client.py` module."""
+from typing import Dict
 import unittest
 from client import GithubOrgClient
 from parameterized import parameterized
@@ -60,6 +61,22 @@ class TestGithubOrgClient(unittest.TestCase):
             self.assertEqual(resp, mock_public_repos.return_value)
             mock_get.assert_called_once()
             mock_public_repos.assert_called_once()
+
+    @parameterized.expand([
+        ({'license': {'key': 'my_license'}}, 'my_license', True),
+        ({'license': {'key': 'other_license'}}, 'my_license', False)
+    ])
+    def test_has_license(self, repo: Dict[str, Dict],
+                         key: str, expected: bool) -> None:
+        """Test `GithubOrgClient.has_license` method.
+
+        Args:
+            repo (dict): repository representation.
+            key (str): license for the repo.
+            expected (bool): expected output.
+        """
+        has_license = GithubOrgClient.has_license(repo, key)
+        self.assertIs(has_license, expected)
 
 
 if __name__ == "__main__":
